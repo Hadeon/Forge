@@ -1,0 +1,208 @@
+@import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+
+#workSpace {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.appendedButton {
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-color: #333;
+  border-style: solid;
+  border-width: 10px;
+  background-color: #222;
+  color: white;
+  padding-top: 0px;
+  text-align: center;
+  font-size: 25px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+div span {
+	position: relative;
+	top: 60px;
+}
+
+.whatDoYouSeek {
+  text-size: 50px;
+  text-align: center;
+  margin-top: 200px;
+  font-family: cursive;
+}
+
+.container {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+#close {
+  font-family: Arial;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+  width: 50px;
+  position: relative;
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#forgeTitle {
+  font-size: 2.5vh;
+  letter-spacing: 3px;
+  color: black;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.options {
+  font-size: 25px;
+}
+
+#forgeSpace {
+  top: 30%;
+  height: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+#forgeSpace select{
+    font-size: 2vh;
+    margin: 20px;
+    cursor: pointer;
+    width: 300px;
+    height: 35px;
+    font-weight: bold;
+    background-color: #eee;
+    color: #222;
+    letter-spacing: 2px;
+  }
+  button{
+    margin-top: 50px;
+    font-size: 2vh;
+    font-family: Arial;
+    border-radius: 10%;
+    background-color: #333;
+    border-color: #444;
+    border-width: 5px;
+  }
+}
+
+// Fade Animations are below
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-in-one {
+  -webkit-animation-delay: 0.05s;
+  -moz-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+
+.fade-in-two {
+  -webkit-animation-delay: .15s;
+  -moz-animation-delay: .15s;
+  animation-delay: .15s;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  opacity: 1;
+  -webkit-animation: fadeOut ease-in 1;
+  -moz-animation: fadeOut ease-in 1;
+  animation: fadeOut ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-out-one {
+    -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+
+span.title {
+	display: none;
+}
