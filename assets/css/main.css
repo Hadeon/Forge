@@ -24,6 +24,11 @@
   cursor: pointer;
 }
 
+.invert {
+  color: black;
+  background-color: #aaa;
+}
+
 div span {
 	position: relative;
 	top: 60px;
@@ -70,6 +75,11 @@ div span {
 
 .options {
   font-size: 25px;
+}
+
+#resultField {
+  margin-top: 50px;
+  font-size: 2vh;
 }
 
 #forgeSpace {

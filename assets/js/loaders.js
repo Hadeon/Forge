@@ -52,7 +52,7 @@
   //Weapon Forge Loader
   function loadWeaponForge(){
     $('#workSpace').append('<div id="close" class="fade-in fade-in-two">X</div>');
-    $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Weapon Forge</div><select id="weaponType" class="options"><option selected disabled>Weapon Type</option><option value="sword">Sword</option><option value="dagger">Dagger</option><option value="axe">Axe</option><option value="mace">Mace</option><option value="staff">Staff</option><option value="bow">Bow</option><option value="spear">Spear</option></select><select id="weaponTheme" class="options"><option selected disabled>Theme</option><option value="fierce">Fierce</option><option value="mystical">Mystical</option><option value="comical">Comical</option><option value="evil">Evil</option><option value="virtue">Virtuous</option></select></br><button class="btn btn-primary">Forge!</button><div>');
+    $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Weapon Forge</div><select id="weaponType" class="options"><option selected disabled>Weapon Type</option><option value="sword">Sword</option><option value="dagger">Dagger</option><option value="axe">Axe</option><option value="mace">Mace</option><option value="staff">Staff</option><option value="bow">Bow</option><option value="spear">Spear</option></select><select id="weaponTheme" class="options"><option selected disabled>Theme</option><option value="fierce">Fierce</option><option value="mystical">Mystical</option><option value="comical">Comical</option><option value="evil">Evil</option><option value="virtue">Virtuous</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><div id="resultField"><h3 id="result"></h3></div><div>');
     //Close Forge
       $('#close').click(function(){
       $('#workSpace').empty();
@@ -60,11 +60,140 @@
       loadArmorButton();
       loadNameButton();
     });
+    //Fucking hell --------------------------------------------------------------------------------
+    
+//Library of weapon titles & moods above
+
+var weapons = {
+  'sword': ['Blade of ', 'razor', 'Razor of ', 'Foil of ', 'foil', 'Sword of ',
+  'brand', 'bane', 'Cutlass of ', 'steel', 'edge', 'slayer', 'reaver', 'thorn',
+  'shear', 'cutter', 'Falchion of ', 'rend', 'needle', 'slicer', 'stinger', 'end',
+   'soul', 'eater', 'bender', 'song', 'bringer', 'Bane of ', 'Slayer of ', 'hunter',
+    'Reaper of ', 'Bringer of ', 'Harbinger of ', 'scale', 'weaver', 'fang', 'talon'],
+
+  'dagger': ['Dagger of ', 'Knife of ', 'Schiv of ', 'edge', 'cleaver', 'razor',
+  'rend', 'thorn', 'spine', 'carver', 'needle', 'scar', 'skinner', 'Dirk of ',
+  'splinter', 'sting', 'kiss', 'soul', 'eater', 'song', 'bringer', 'Bane of ',
+  'hunter', 'ender','Reaper of ', 'Bringer of ', 'Harbinger of ', 'weaver', 'fang',
+  'talon', 'tooth'],
+
+  'spear': ['Spear of ', 'guard', 'spike', 'pike', 'spear', 'Halberd of ', 'lance',
+   'Harpoon of ', 'Javelin of ', 'piercer', 'eternity', 'eternal ', 'destiny', 'ender',
+    'fall', 'glaive', 'eater', 'bane', 'Conquerer of ', 'Slayer of ','slayer', 'Lance of',
+     'vanquisher', 'song', 'bringer', 'Bane of ', 'hunter', 'Piercer of ','Reaper of ',
+      'Bringer of ', 'Harbinger of ', 'tail', 'thorn', 'razor', 'Impaler of '],
+
+  'axe': ['Axe of ', 'rend', 'Hatchet of ', 'splitter', 'breaker', 'fear', 'bane',
+  'cleaver', 'slayer', 'mar', 'shear', 'carver', 'maim', 'strike', 'harvester',
+  'cutter', 'axe', 'Betrayer', 'The Carver', 'eater', 'Conqueror of ', 'mourn',
+  'bringer', 'Bane of ', 'fall', 'ender', 'killer', 'edge', 'Edge of ','Reaper of ',
+   'Bringer of ', 'Harbinger of ', 'scale', "Cleaver of ", 'chopper'],
+
+  'mace': ['Mace of ', 'Star of ', 'star', 'mace', 'crusher', 'Cudgel of ', 'club',
+  'rod', 'maul', 'mauler', 'pummel', 'breaker', 'bruiser', 'iron', 'harvester',
+  'killer', 'strike', 'Punisher of ', 'skull', 'shatterer', 'quake', 'Breaker of ',
+  'fall', 'death', 'fist', 'Fist of ', 'eater', 'bane', 'Conquerer of ', 'mourn',
+  'bringer', 'Bane of ', 'ender', 'Maul of ', 'Crusher of ','Reaper of ', 'Bringer of ',
+   'Harbinger of ', 'scale', 'cudgel', 'end', 'rend'],
+
+  'bow': ['Bow of ', 'arrow', 'bolt', 'kiss', 'piercer', 'string', 'Reach of ',
+  'reach', 'arm', 'wind', 'shot', 'arch', 'Hand of ', 'Arm of ', 'aim', 'feather',
+  'reaver', 'harvester', 'curve', 'whisper', 'wisp', 'Curve of ', 'song',
+  'bane', 'killer', 'eye', 'Bane of ','Reaper of ', 'Bringer of ', 'Harbinger of ',
+   'bringer', 'caller', 'silence', 'Killer of ', 'Eye of ', 'Arm of '],
+
+  'staff' : ['Staff of ', 'maker', 'Pole of ', 'Rod of ', 'rod', 'holder', 'Caster of ',
+  'guard', 'caster', 'warden', 'binder', 'vex', 'Vexer of ', 'hex', 'wind', 'spirit',
+  'boon', 'kiss', 'caller','speaker', 'light', 'flare', 'spire', 'breaker', 'bender',
+  'song', 'shaper', 'The Reckoning of ', 'warden', 'bringer', 'Bane of ', 'Summoner of ',
+  'Reaper of ', 'Bringer of ', 'Harbinger of ', 'wisp', 'snare']
+};
+var pres = {
+  'good':['Sin', 'Sun', 'God', 'Holy', 'Blessed', 'Glimmer', 'Devil', 'Demon', 'Sky',
+   'Star', 'Orc', 'Daemon', 'Law', 'Vale', 'Divine', 'Black', 'Hell', 'Righteous',
+    'Truth', 'Aegis', 'Aether', 'Ether', 'Justice', "God's ", 'Fire', 'Flame', 'Gleam',
+    'Hope', 'Virtue', "The Lord's ", 'Angel',],
+  'evil':["Hell's ", 'Light', 'Angel', 'Death', 'Blood', 'Sin', 'Pain', 'Void', 'Abyss',
+   'Shadow', 'Night', 'Fang', 'Nightmare', 'Gore', 'Demon', 'Warg', 'Doom', 'Grim',
+    "Death's ", 'Oblivion', 'Suffer', 'Fire', 'Flame', 'Flesh', 'Skull', 'Torment', 'Widow', 'Ice',
+     'Chill', 'Scum', 'Filth', 'Spider', 'Rot', 'Famine', 'Brood', 'Gut'],
+  'funny':['Shit', 'Mule', 'Lily', 'Cow', 'Weak', 'Sauce', 'Ox', 'Bunny', 'Useless',
+   'What', 'Who', 'Why', 'How', 'That', 'Kitten', 'Puppy', 'Moose', 'Haron', 'Salmon',
+    'Fish', 'Apple', 'Pear', 'Foot', 'Finger', 'Happy', 'Derp', 'Dumb', 'Trump', 'Potato',
+     'Cat', 'Dog', 'Fingernail', 'Fat', 'Flatulence', 'Constipation', 'Ugly', 'Redneck', "Alcoholic's ",
+    'Turtle'],
+  'fierce':['Blood', 'Bone', 'Gore', 'Death', 'Fire', 'Flame', 'Ice', 'Chill', 'Titan',
+   'Giant', 'Troll', 'God', 'Beast', 'Legend', 'Hope', 'King', "King's ", "Lord's ",
+    'Phantom', 'Ghost', 'Worm', 'Dragon', "Dragon's ", 'Lion', 'Eternity', 'Skull',
+    'Flesh', 'Wild', 'Storm', "Warrior's ", 'Wolf', 'Tiger', 'Pack', 'Wild', 'Warrior',
+     'Venom', 'Spider', 'Char'],
+  'mystical':['Aegis', 'Mage', 'Wisdom', 'Mind', 'Soul', 'Ether', 'Arcane', 'Elf',
+  'Wild', 'Forest', 'Water', 'Ocean', 'River', 'Elm','Pine', 'Wood', 'Mountain', 'World',
+  'Earth', 'Sky', 'Cloud', 'Storm', 'Thunder', 'Lightning', 'Fire', 'Elemental', ],
+  'Charming':[]};
+var posts = {
+  'good':['Heaven', 'Holiness', 'The Sky', 'Stars', 'The Holy', 'The Sun', 'The Shining',
+   'The Blessed', 'God', 'The Light', 'Justice', 'Righteousness', 'Judgement', 'Sin',
+   'The Just', 'The Divine', 'Hope', 'The Angels', 'The Flame', 'The Holy Fire', "God's Eye", 'Blessings'],
+  'evil':['The Sadistic', 'Hell', 'Satan', 'Orckin', 'The Black', 'The Abyss', 'The Void',
+  'Nightmares', 'Torment', 'The Apocalypse', 'The Damned', 'Suffering', 'Filth', 'Hearts',
+  'Souls', 'The Unclean', 'Ash', 'Oblivion', 'Skulls', 'Bones', 'Blood', 'Death', 'Gore', 'Rot', 'Decay', 'Famine',
+   'Widows', 'The Dead', 'Bloodlust', 'The Fallen'],
+  'funny':['Derp', 'The Fish', 'Salmon', 'Kittens', 'Puppies', 'Feet', 'Dirty Socks',
+  'The Elderly', 'Farts', 'Someone', 'Somebody', 'Something', 'Awesomesauce', 'Failure',
+   'Pointlessness', 'Uselessness', 'Stupidity', 'Ted Cruz', 'Donald Trump', 'Constipation',
+  'Tripping', 'Sheep-herding', 'Mice', 'Turtles'],
+  'fierce':['Blood', 'Bone', 'Kings', "Lords", 'Strength', 'Mountains', 'Thunder',
+   'Legends', 'Wolves', 'Hunters', 'The Hunt', 'The Wild', 'Lions', 'The Bear',
+   'The Dragon', 'Foes', 'Ash', 'Fire', 'Flame', 'Burning', 'The Untamed', 'The Warrior'],
+  'Mystical':['Aegis', 'Intellect', 'The Aether', 'The Arcane', 'Wisdom', 'God',
+  'The Mind', 'The Soul', 'The Eternal', 'Enigmas', 'The Elements', 'Beyond', 'The Wild',
+   'The Wise', 'The Cunning'],
+  'Charming':[]
+};
+
+//Variables for Selected Values to load append to
+
+var weaponType = '';
+var weaponTheme = '';
+
+//Weapon Type Selection
+
+$('#weaponType').on('change', function() {
+  weaponType = (this.value);
+});
+
+//Weapon Theme Selection
+
+$('#weaponTheme').on('change', function() {
+  weaponTheme = (this.value);
+});
+
+//Randomly generate on click
+
+$('#forgeButton').on('click',
+  function() {
+  $("#resultField").empty();
+  var wpnn = weapons[weaponType][Math.floor(Math.random()*weapons[weaponType].length)];
+  var pre = pres[weaponTheme][Math.floor(Math.random()*pres[weaponTheme].length)];
+  var post = posts[weaponTheme][Math.floor(Math.random()*posts[weaponTheme].length)];
+  var result = '';
+  if(wpnn[0] == wpnn[0].toUpperCase() && wpnn[-1] != ' '){
+    result = wpnn + post;
+  }
+  if(wpnn[0] == wpnn[0].toLowerCase()){
+    result = pre + wpnn;
+  }
+    $('#resultField').append(result)  
+      }
+);
+
+//--------------------------------------------------------------------------------------
   }
   //Armor Forge Loader
   function loadArmorForge(){
     $('#workSpace').append('<div id="close" class="fade-in fade-in-two">X</div>');
-    $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Armor Forge</div><select id="armorType" class="options"><option selected disabled>Armor Type</option><option value="light">Light</option><option value="Medium">Medium</option><option value="heavy">Heavy</option></select><select id="armorPiece" class="options"><option selected disabled>Armor Piece</option><option value="helm">Helm</option><option value="chest">Chest</option><option value="bracers">Bracers</option><option value="cloak">Cloak</option><option value="gloves">Gloves</option><option value="leggings">Leggings</option><option value="boots">Boots</option></select><select id="armorTheme" class="options"><option selected disabled>Theme</option><option value="fierce">Fierce</option><option value="mystical">Mystical</option><option value="comical">Comical</option><option value="evil">Evil</option><option value="virtue">Virtuous</option></select></br><button class="btn btn-primary">Forge!</button><div>');
+    $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Armor Forge</div><select id="armorType" class="options"><option selected disabled>Armor Type</option><option value="light">Light</option><option value="Medium">Medium</option><option value="heavy">Heavy</option></select><select id="armorPiece" class="options"><option selected disabled>Armor Piece</option><option value="helm">Helm</option><option value="chest">Chest</option><option value="bracers">Bracers</option><option value="cloak">Cloak</option><option value="gloves">Gloves</option><option value="leggings">Leggings</option><option value="boots">Boots</option></select><select id="armorTheme" class="options"><option selected disabled>Theme</option><option value="fierce">Fierce</option><option value="mystical">Mystical</option><option value="comical">Comical</option><option value="evil">Evil</option><option value="virtue">Virtuous</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><h2 id="result"></h2><div>');
     //Close Forge
       $('#close').click(function(){
       $('#workSpace').empty();
@@ -76,7 +205,7 @@
   //Name Forge Loader
   function loadNameForge(){
     $('#workSpace').append('<div id="close" class="fade-in fade-in-two">X</div>');
-    $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Name Forge</div><select id="nameRace" class="options"><option selected disabled>Race</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="orc">Orc</option></select><select id="nameGender" class="options"><option selected disabled>Gender</option><option value="male">Male</option><option value="female">Female</option></select></br><button class="btn btn-primary">Forge!</button><div>');
+    $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Name Forge</div><select id="nameRace" class="options"><option selected disabled>Race</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="orc">Orc</option></select><select id="nameGender" class="options"><option selected disabled>Gender</option><option value="male">Male</option><option value="female">Female</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><h2 id="result"></h2><div>');
     //Close Forge
       $('#close').click(function(){
       $('#workSpace').empty();
@@ -86,7 +215,13 @@
     });
   }
 
-  //Button Click
-  $('.btn').mousedown(function(){
+  //Button Click Change Color
+  $('#forgeButton').mousedown(function(){
 
   });
+  
+  $('#forgeButton').mouseup(function(){
+
+  });
+
+
