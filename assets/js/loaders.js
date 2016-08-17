@@ -189,6 +189,7 @@ $('#forgeButton').on('click',
 );
 
 //--------------------------------------------------------------------------------------
+//Need to reformat the logic
   }
   //Armor Forge Loader
   function loadArmorForge(){
