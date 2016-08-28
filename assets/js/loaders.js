@@ -208,7 +208,7 @@ function loadArmorForge() {
 //Name Forge Loader
 function loadNameForge() {
   $('#workSpace').append('<div id="close" class="fade-in fade-in-two">X</div>');
-  $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Name Forge</div><p>Orc female, dwarf and halfling loaders not built. Library will be updated soon!</p><select id="nameRace" class="options"><option selected disabled>Race</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="orc">Orc</option></select><select id="nameGender" class="options"><option selected disabled>Gender</option><option value="male">Male</option><option value="female">Female</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><div id="resultField"><h2 id="result"></h2></div></div>');
+  $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Name Forge</div><p>Dwarf and halfling loaders not built. Library will be updated soon!</p><select id="nameRace" class="options"><option selected disabled>Race</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="orc">Orc</option></select><select id="nameGender" class="options"><option selected disabled>Gender</option><option value="male">Male</option><option value="female">Female</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><div id="resultField"><h2 id="result"></h2></div></div>');
   //Close Forge
   $('#close').click(function () {
     $('#workSpace').empty();
@@ -220,15 +220,15 @@ function loadNameForge() {
   // Prefixes for First Names
   humanPre = {
     'male': ['Thom', 'Ja', 'Te', 'Ar', 'Ed', 'Bre', 'Bra', 'Ben', 'Ry', 'Ch', 'Der', 'Mich', 'Dam', 'Eric', 'Jan', 'Bar', 'Cha', 'Mit', 'Wil', 'Ell', 'Nic', 'Aar', 'Ad', 'Rhyn', 'Jae', 'Dor', 'Alla', 'Al', 'Era', 'Ave', 'Pal', 'Paul'],
-    'female': ['Mer', 'Dar', 'Jan', 'Mar', 'Nat', 'El', 'Dan', 'Ka', 'Cai', 'Lau', 'Lou', 'Den', 'San', 'Zan', 'Van']
+    'female': ['Mer', 'Dar', 'Jan', 'Mar', 'Nat', 'El', 'Dan', 'Ka', 'Cai', 'Lau', 'Lou', 'Den', 'San', 'Zan', 'Van', "Liz", "Jen", "Sar", "Lu", "Er", 'Ev', 'Aber', 'Am', 'R']
   };
   elfPre = {
-    'male': ['Aes', 'Rel', 'Cae', 'Aed', 'Var', 'Del', 'Fal', 'Ol', 'Erv', 'Er', 'Ry', 'Rae', 'Cav', 'Err', 'Par', 'Far', 'Zole', 'Am', 'Al', 'Corv'],
-    'female': ['Bel', 'Aeo', 'Cae', 'Aer', 'Sae', 'Sar', 'Car', 'Orl', 'Del', 'Dae', 'Yen', 'Vyn', 'Syl', 'Sorv', 'Shae', 'Esp']
+    'male': ['Aes', 'Rel', 'Cae', 'Aed', 'Var', 'Del', 'Fal', 'Ol', 'Erv', 'Er', 'Ry', 'Rae', 'Cav', 'Err', 'Par', 'Far', 'Zole', 'Am', 'Al', 'Corv', 'Valen', 'Ryn', 'Ry', 'Ael', 'E', 'A', 'Ca', "V'", 'Lyr'],
+    'female': ['Bel', 'Aeo', 'Cae', 'Aer', 'Sae', 'Sar', 'Car', 'Orl', 'Del', 'Dae', 'Yen', 'Vyn', 'Syl', 'Sorv', 'Shae', 'Esp', 'Lyr', 'Lyril', 'Ell', 'Es', 'E', 'Ae', 'Daes']
   };
   orcPre = {
-    'male': ['Korg', 'Ag', 'Bol', 'Bac', 'Mag', 'Norg', 'Kad', 'Gal', 'Dor', 'Dol', 'Ro', 'So', 'Mog', 'Ug', 'Cro', 'Lug'],
-    'female': ['NULL']
+    'male': ['Korg', 'Ag', 'Bol', 'Bac', 'Mag', 'Norg', 'Kad', 'Gal', 'Dor', 'Dol', 'Ro', 'So', 'Mog', 'Ug', 'Cro', 'Lug', 'Lugga', 'Gib', 'Big', 'Dodz', 'Egg', 'Hog', 'Wor', 'Ogg', 'Both', 'Bokk'],
+    'female': ['Kag','Hag', 'Beg', 'Gerd', 'Mag', 'Nor', 'Gaz', 'Ra', 'Rab', 'Sak', 'Megga', 'Ugga', 'Crogga', 'Lugga']
   };
   dwarfPre = {
     'male': ['NULL'],
@@ -241,15 +241,15 @@ function loadNameForge() {
   // Suffixes for First Names
   humanPost = {
     'male': ['mon', 'son', 'sen', 'en', 'aer', 'on', 'ek', 'ed', 'mir', 'ir', 'id', 'ron', 'don', 'den', 'car', 'nir', 'vir', 'sir', 'thar', 'then', 'essa', 'mond', 'mend', 'don', 'den', 'len', 'car', 'card', 'ward', 'thar', 'dar'],
-    'female': ['elle', 'ella', 'el', 'ette', 'ta', 'ya', 'ie', 'lyn', 'lin', 'anne', 'esse', 'sha', 'sa', 'ra', 'tha', 'emma', 'line', 'leen', 'essa', 'alle', 'rella', 'etta', 'lyse']
+    'female': ['elle', 'ella', 'el', 'ette', 'ta', 'ya', 'ie', 'lyn', 'lin', 'anne', 'esse', 'sha', 'sa', 'ra', 'tha', 'emma', 'line', 'leen', 'essa', 'alle', 'rella', 'etta', 'lyse', 'ren', 'iza', 'beth', 'a', 'thra', 'alie', 'thira', 'mira', 'miria',]
   };
   elfPost = {
-    'male': ['ylon', 'lynar', 'thyr', 'asyn', 'aer', 'vyn', 'sar', 'rem', 'vyr', 'siir', 'viir', 'diir', 'thiir'],
-    'female': ['wyn', 'lyn', 'vyn', 'lya', 'lys', 'ryn', 'rel', 'yn', 'ael', 'raene', 'thyll', 'liin', 'elyon', 'viis']
+    'male': ['ylon', 'lynar', 'thyr', 'asyn', 'aer', 'vyn', 'sar', 'rem', 'vyr', 'siir', 'viir', 'diir', 'thiir', 'naeth', 'thil', 'thiir', 'dyr', 'thys', 'ys', 'iim', 'thyn',],
+    'female': ['wyn', 'lyn', 'vyn', 'lya', 'lys', 'ryn', 'rel', 'yn', 'ael', 'raene', 'thyll', 'liin', 'elyon', 'viis', 'ella', 'ellia', 'ellya', 'ya','ae', 'amara', 'mra', 'lysa', 'ssa', 'sae',]
   };
   orcPost = {
-    'male': ['gesh', 'gath', 'mar', 'geth', 'nnar', 'plath', 'gavar', 'ug', 'lug', 'og', 'bog', 'omag', 'zag', 'zig', 'zan'],
-    'female': ['NULL']
+    'male': ['gesh', 'gath', 'mar', 'geth', 'nnar', 'plath', 'gavar', 'ug', 'lug', 'og', 'bog', 'omag', 'zag', 'zig', 'zan', 'choth', 'goth', 'hog', 'blud', 'doom', 'bigg', 'dun', 'igg', 'burz', 'guz', 'digg', 'mogg', 'osk', 'go', 'oz'], 
+    'female': ['ka', 'ga', 'ggy', 'by', 'oz', 'a', 'gerd', 'ta', 'kro', 'kra', 'tha', 'ma', 'kroa', 'ga', 'otha', 'etha',]
   };
   dwarfPost = {
     'male': ['NULL'],
