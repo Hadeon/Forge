@@ -320,5 +320,3 @@ $('#forgeButton').mousedown(function () {
 $('#forgeButton').mouseup(function () {
 
 });
-
-
