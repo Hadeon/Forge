@@ -109,7 +109,7 @@ function loadWeaponForge() {
       'Reaper of ', 'Bringer of ', 'Harbinger of ', 'wisp', 'snare']
   };
   var pres = {
-    'good': ['Sin', 'Sun', 'God', 'Holy', 'Blessed', 'Glimmer', 'Devil', 'Demon', 'Sky',
+    'virtuous': ['Sin', 'Sun', 'God', 'Holy', 'Blessed', 'Glimmer', 'Devil', 'Demon', 'Sky',
       'Star', 'Orc', 'Daemon', 'Law', 'Vale', 'Divine', 'Black', 'Hell', 'Righteous',
       'Truth', 'Aegis', 'Aether', 'Ether', 'Justice', "God's ", 'Fire', 'Flame', 'Gleam',
       'Hope', 'Virtue', "The Lord's ", 'Angel',],
@@ -117,7 +117,7 @@ function loadWeaponForge() {
       'Shadow', 'Night', 'Fang', 'Nightmare', 'Gore', 'Demon', 'Warg', 'Doom', 'Grim',
       "Death's ", 'Oblivion', 'Suffer', 'Fire', 'Flame', 'Flesh', 'Skull', 'Torment', 'Widow', 'Ice',
       'Chill', 'Scum', 'Filth', 'Spider', 'Rot', 'Famine', 'Brood', 'Gut'],
-    'funny': ['Shit', 'Mule', 'Lily', 'Cow', 'Weak', 'Sauce', 'Ox', 'Bunny', 'Useless',
+    'comical': ['Shit', 'Mule', 'Lily', 'Cow', 'Weak', 'Sauce', 'Ox', 'Bunny', 'Useless',
       'What', 'Who', 'Why', 'How', 'That', 'Kitten', 'Puppy', 'Moose', 'Haron', 'Salmon',
       'Fish', 'Apple', 'Pear', 'Foot', 'Finger', 'Happy', 'Derp', 'Dumb', 'Trump', 'Potato',
       'Cat', 'Dog', 'Fingernail', 'Fat', 'Flatulence', 'Constipation', 'Ugly', 'Redneck', "Alcoholic's ",
@@ -133,21 +133,21 @@ function loadWeaponForge() {
     'Charming': []
   };
   var posts = {
-    'good': ['Heaven', 'Holiness', 'The Sky', 'Stars', 'The Holy', 'The Sun', 'The Shining',
+    'virtuous': ['Heaven', 'Holiness', 'The Sky', 'Stars', 'The Holy', 'The Sun', 'The Shining',
       'The Blessed', 'God', 'The Light', 'Justice', 'Righteousness', 'Judgement', 'Sin',
       'The Just', 'The Divine', 'Hope', 'The Angels', 'The Flame', 'The Holy Fire', "God's Eye", 'Blessings'],
     'evil': ['The Sadistic', 'Hell', 'Satan', 'Orckin', 'The Black', 'The Abyss', 'The Void',
       'Nightmares', 'Torment', 'The Apocalypse', 'The Damned', 'Suffering', 'Filth', 'Hearts',
       'Souls', 'The Unclean', 'Ash', 'Oblivion', 'Skulls', 'Bones', 'Blood', 'Death', 'Gore', 'Rot', 'Decay', 'Famine',
       'Widows', 'The Dead', 'Bloodlust', 'The Fallen'],
-    'funny': ['Derp', 'The Fish', 'Salmon', 'Kittens', 'Puppies', 'Feet', 'Dirty Socks',
+    'comical': ['Derp', 'The Fish', 'Salmon', 'Kittens', 'Puppies', 'Feet', 'Dirty Socks',
       'The Elderly', 'Farts', 'Someone', 'Somebody', 'Something', 'Awesomesauce', 'Failure',
       'Pointlessness', 'Uselessness', 'Stupidity', 'Ted Cruz', 'Donald Trump', 'Constipation',
       'Tripping', 'Sheep-herding', 'Mice', 'Turtles'],
     'fierce': ['Blood', 'Bone', 'Kings', "Lords", 'Strength', 'Mountains', 'Thunder',
       'Legends', 'Wolves', 'Hunters', 'The Hunt', 'The Wild', 'Lions', 'The Bear',
       'The Dragon', 'Foes', 'Ash', 'Fire', 'Flame', 'Burning', 'The Untamed', 'The Warrior'],
-    'Mystical': ['Aegis', 'Intellect', 'The Aether', 'The Arcane', 'Wisdom', 'God',
+    'mystical': ['Aegis', 'Intellect', 'The Aether', 'The Arcane', 'Wisdom', 'God',
       'The Mind', 'The Soul', 'The Eternal', 'Enigmas', 'The Elements', 'Beyond', 'The Wild',
       'The Wise', 'The Cunning'],
     'Charming': []
