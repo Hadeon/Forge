@@ -219,7 +219,7 @@ function loadNameForge() {
   //Library of Naming Conventions ---------------------------------------------------------------------
   // Prefixes for First Names
   humanPre = {
-    'male': ['Thom', 'Ja', 'Te', 'Arn', 'Ed', 'Bre', 'Bra', 'Ben', 'Ry', 'Ch', 'Der', 'Mich', 'Dam', 'Eric', 'Jan', 'Bar', 'Cha', 'Mit', 'Wil', 'Eld', 'Nic', 'Aar', 'Ad', 'Rhyn', 'Jae', 'Dor', 'Alla', 'Al', 'Era', 'Ave', 'Pal', 'Paul', 'Ald', 'Jos', 'Abel', 'Tor', 'Jac', 'Mal', 'Nor', 'Geor', 'Quinn', 'Hen', 'Har', 'Hal', 'Sam', 'Kar', 'Ked', 'Cad',],
+    'male': ['Thom', 'Ja', 'Te', 'Arn', 'Ed', 'Bre', 'Bra', 'Ben', 'Ry', 'Chr', 'Der', 'Mich', 'Dam', 'Eric', 'Jan', 'Bar', 'Cha', 'Mit', 'Wil', 'Eld', 'Nic', 'Aar', 'Ad', 'Rhyn', 'Jae', 'Dor', 'Alla', 'Al', 'Era', 'Ave', 'Pal', 'Paul', 'Ald', 'Jos', 'Abel', 'Tor', 'Jac', 'Mal', 'Nor', 'Geor', 'Quinn', 'Hen', 'Har', 'Hal', 'Sam', 'Kar', 'Ked', 'Cad',],
     'female': ['Mer', 'Dar', 'Jan', 'Mar', 'Nat', 'El', 'Dan', 'Ka', 'Cai', 'Lau', 'Lou', 'Den', 'San', 'Zan', 'Van', "Liz", "Jen", "Sar", "Lu", "Eran", 'Ev', 'Aber', 'Am', 'R']
   };
   elfPre = {
@@ -240,7 +240,7 @@ function loadNameForge() {
   };
   // Suffixes for First Names
   humanPost = {
-    'male': ['mon', 'son', 'sen', 'end', 'aer', 'on', 'ek', 'ed', 'mir', 'ir', 'id', 'ron', 'don', 'den', 'car', 'nir', 'vir', 'sir', 'thar', 'then', 'ek', 'mond', 'mend', 'don', 'den', 'len', 'car', 'card', 'ward', 'thar', 'dar', 'eth', 'bar', 'ry', 'ly', 'ir'],
+    'male': ['mon', 'son', 'sen', 'end', 'aer', 'on', 'ek', 'ed', 'mir', 'ir', 'id', 'ron', 'don', 'den', 'car', 'nir', 'vir', 'sir', 'thar', 'then', 'ek', 'mond', 'mend', 'don', 'den', 'len', 'car', 'card', 'ward', 'thar', 'dar', 'eth', 'bar', 'ry', 'nar', 'ir', 'is'],
     'female': ['elle', 'ella', 'el', 'ette', 'ta', 'ya', 'ie', 'lyn', 'lin', 'anne', 'esse', 'sha', 'sa', 'ra', 'tha', 'emma', 'line', 'leen', 'essa', 'alle', 'rella', 'etta', 'lyse', 'ren', 'iza', 'beth', 'a', 'thra', 'alie', 'thira', 'mira', 'miria',]
   };
   elfPost = {
