@@ -240,7 +240,7 @@ function loadNameForge() {
   };
   // Suffixes for First Names
   humanPost = {
-    'male': ['mon', 'son', 'sen', 'en', 'aer', 'on', 'ek', 'ed', 'mir', 'ir', 'id', 'ron', 'don', 'den', 'car', 'nir', 'vir', 'sir', 'thar', 'then', 'essa', 'mond', 'mend', 'don', 'den', 'len', 'car', 'card', 'ward', 'thar', 'dar'],
+    'male': ['mon', 'son', 'sen', 'en', 'aer', 'on', 'ek', 'ed', 'mir', 'ir', 'id', 'ron', 'don', 'den', 'car', 'nir', 'vir', 'sir', 'thar', 'then', 'ek', 'mond', 'mend', 'don', 'den', 'len', 'car', 'card', 'ward', 'thar', 'dar', 'eth', 'bar'],
     'female': ['elle', 'ella', 'el', 'ette', 'ta', 'ya', 'ie', 'lyn', 'lin', 'anne', 'esse', 'sha', 'sa', 'ra', 'tha', 'emma', 'line', 'leen', 'essa', 'alle', 'rella', 'etta', 'lyse', 'ren', 'iza', 'beth', 'a', 'thra', 'alie', 'thira', 'mira', 'miria',]
   };
   elfPost = {
