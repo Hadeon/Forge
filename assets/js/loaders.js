@@ -219,7 +219,7 @@ function loadNameForge() {
   //Library of Naming Conventions ---------------------------------------------------------------------
   // Prefixes for First Names
   humanPre = {
-    'male': ['Thom', 'Ja', 'Te', 'Ar', 'Ed', 'Br', 'Ben', 'Ry', 'Ch', 'Der', 'Mich', 'Dam', 'Eric', 'Jan', 'Bar', 'Cha', 'Mit', 'Wil', 'Ell', 'Nic', 'Aar', 'Ad', 'Rhyn', 'Jae', 'Dor', 'Alla', 'Al'],
+    'male': ['Thom', 'Ja', 'Te', 'Ar', 'Ed', 'Bre', 'Bra', 'Ben', 'Ry', 'Ch', 'Der', 'Mich', 'Dam', 'Eric', 'Jan', 'Bar', 'Cha', 'Mit', 'Wil', 'Ell', 'Nic', 'Aar', 'Ad', 'Rhyn', 'Jae', 'Dor', 'Alla', 'Al', 'Era', 'Ave', 'Pal', 'Paul'],
     'female': ['Mer', 'Dar', 'Jan', 'Mar', 'Nat', 'El', 'Dan', 'Ka', 'Cai', 'Lau', 'Lou', 'Den', 'San', 'Zan', 'Van']
   };
   elfPre = {
