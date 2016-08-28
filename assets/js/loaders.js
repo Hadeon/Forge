@@ -208,7 +208,7 @@ function loadArmorForge() {
 //Name Forge Loader
 function loadNameForge() {
   $('#workSpace').append('<div id="close" class="fade-in fade-in-two">X</div>');
-  $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Name Forge</div><select id="nameRace" class="options"><option selected disabled>Race</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="orc">Orc</option></select><select id="nameGender" class="options"><option selected disabled>Gender</option><option value="male">Male</option><option value="female">Female</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><div id="resultField"><h2 id="result"></h2></div></div>');
+  $('#workSpace').append('<div id="forgeSpace" class="fade-in fade-in-one"><div id="forgeTitle">The Name Forge</div><p>Orc female, dwarf and halfling loaders not built. Library will be updated soon!</p><select id="nameRace" class="options"><option selected disabled>Race</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="orc">Orc</option></select><select id="nameGender" class="options"><option selected disabled>Gender</option><option value="male">Male</option><option value="female">Female</option></select></br><button id="forgeButton" class="btn btn-primary">Forge!</button><div id="resultField"><h2 id="result"></h2></div></div>');
   //Close Forge
   $('#close').click(function () {
     $('#workSpace').empty();
