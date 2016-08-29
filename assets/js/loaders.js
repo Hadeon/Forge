@@ -231,8 +231,8 @@ function loadNameForge() {
     'female': ['Kag','Hag', 'Beg', 'Gerd', 'Mag', 'Nor', 'Gaz', 'Ra', 'Rab', 'Sak', 'Megga', 'Ugga', 'Crogga', 'Lugga']
   };
   dwarfPre = {
-    'male': ['NULL'],
-    'female': ['NULL']
+    'male': ['Baro', 'Bara', 'Bari', 'Gam', 'Gan', 'Boi', 'Foi', 'Gloi', 'Hu', 'Ta', 'Ko', 'De', 'Di', 'Do', 'Fa'],
+    'female': ['Dov', 'Dol', 'Dig', 'Meg', 'Glo', 'Ag', 'Gel', 'Glor', 'Run', 'Dol', 'Thol', 'Ag', 'H', 'Co', 'Kil', 'Ler', 'Ol', 'Vil', 'B']
   };
   halfingPre = {
     'male': ['NULL'],
@@ -252,8 +252,8 @@ function loadNameForge() {
     'female': ['ka', 'ga', 'ggy', 'by', 'oz', 'a', 'gerd', 'ta', 'kro', 'kra', 'tha', 'ma', 'kroa', 'ga', 'otha', 'etha',]
   };
   dwarfPost = {
-    'male': ['NULL'],
-    'female': ['NULL']
+    'male': ['bur', 'fur', 'gan', 'gnus', 'gnar', 'li', 'lin', 'lir', 'mli', 'nus', 'rin', 'ran', 'sin', 'sil', 'sur', 'dor', 'tor', 'dur', 'thur', 'sin'],
+    'female': ['era', 'ala', 'etha', 'orda', 'ldy', 'oka', 'via', 'asha', 'enna', 'lisi', 'erta', 'li', 'ila', 'ertha', 'anna', 'irda']
   };
   halfingPost = {
     'male': ['NULL'],
