@@ -248,7 +248,7 @@ function loadNameForge() {
     'female': ['wyn', 'lyn', 'vyn', 'lya', 'lys', 'ryn', 'rel', 'yn', 'ael', 'raene', 'thyll', 'liin', 'elyon', 'viis', 'ella', 'ellia', 'ellya', 'ya','ae', 'amara', 'mra', 'lysa', 'ssa', 'sae',]
   };
   orcPost = {
-    'male': ['gesh', 'gath', 'mar', 'geth', 'nnar', 'plath', 'gavar', 'ug', 'lug', 'og', 'bog', 'omag', 'zag', 'zig', 'zan', 'choth', 'goth', 'hog', 'blud', 'doom', 'bigg', 'dun', 'igg', 'burz', 'guz', 'digg', 'mogg', 'osk', 'go', 'oz'], 
+    'male': ['gesh', 'gath', 'mar', 'geth', 'nnar', 'plath', 'gavar', 'ug', 'lug', 'og', 'bog', 'omag', 'zag', 'zig', 'zan', 'choth', 'goth', 'hog', 'blud', 'doom', 'bigg', 'dun', 'igg', 'burz', 'guz', 'digg', 'mogg', 'osk', 'go', 'oz'],
     'female': ['ka', 'ga', 'ggy', 'by', 'oz', 'a', 'gerd', 'ta', 'kro', 'kra', 'tha', 'ma', 'kroa', 'ga', 'otha', 'etha',]
   };
   dwarfPost = {
@@ -305,7 +305,18 @@ function loadNameForge() {
       $("#resultField").empty();
       var racePre = racePrefix[gender][Math.floor(Math.random() * racePrefix[gender].length)];
       var racePost = raceSuffix[gender][Math.floor(Math.random() * raceSuffix[gender].length)];
+      function noTriples(racePre, racePost){
+        var fullName = racePre + racePost;
+        for(var i=0;i<fullName.length;i++){
+          if(fullName[i]===fullName[i+1]&&fullName[i+1]===fullName[i+2]){
+            var replace = fullName.split("");
+            replace.splice(i, 1);
+            result = replace.join('');
+          }
+        }
+      }
       var result = racePre + racePost;
+      noTriples(racePre, racePost);
       console.log(result);
       $('#resultField').append(result)
     }
