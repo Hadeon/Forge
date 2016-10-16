@@ -307,13 +307,17 @@ function loadNameForge() {
       var racePost = raceSuffix[gender][Math.floor(Math.random() * raceSuffix[gender].length)];
       function noTriples(racePre, racePost){
         var fullName = racePre + racePost;
+        var replace = fullName.split("");
         for(var i=0;i<fullName.length;i++){
           if(fullName[i]===fullName[i+1]&&fullName[i+1]===fullName[i+2]){
-            var replace = fullName.split("");
             replace.splice(i, 1);
-            result = replace.join('');
           }
         }
+        if(replace[0].match(/([A,E,I,O,U])/g)==null && replace[1].match(/([a,e,i,o,u])/g)==null){
+          console.log('Duplicate first letter and NOT vowel');
+          replace.splice(1,0,'e');
+        }
+        result = replace.join('');
       }
       var result = racePre + racePost;
       noTriples(racePre, racePost);
